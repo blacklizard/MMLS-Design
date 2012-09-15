@@ -1,0 +1,22 @@
+{
+  "name": "MMLS New Design",
+  "version": "1.0",
+  "description": "MMLS New Design",
+  "manifest_version": 2,
+  "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+   "web_accessible_resources": [
+	"001.png",
+	"002.png"
+	],
+  "content_scripts": [
+    {
+      "matches": ["https://mmlscyber.mmu.edu.my/","https://mmlscyber.mmu.edu.my/index.php"],
+      "run_at": "document_start",
+      "js": ["jquery.js","script.js"],
+      "css": ["reset.css","text.css","960.css","design.css"],
+      "all_frames": true
+    }
+  ]
+}
